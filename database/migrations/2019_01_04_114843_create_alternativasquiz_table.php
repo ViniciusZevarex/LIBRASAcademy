@@ -14,7 +14,7 @@ class CreateAlternativasquizTable extends Migration {
 	{
 		Schema::create('alternativasquiz', function(Blueprint $table)
 		{
-			$table->integer('CodAlternativasQuiz')->primary();
+			$table->increments('CodAlternativasQuiz')->primary();
 			$table->integer('CodQuiz')->index('CodQuiz');
 			$table->string('Descricao', 100);
 			$table->boolean('correta');

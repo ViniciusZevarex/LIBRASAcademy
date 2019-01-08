@@ -14,7 +14,7 @@ class CreateDuvidasTable extends Migration {
 	{
 		Schema::create('duvidas', function(Blueprint $table)
 		{
-			$table->integer('CodDuvidas')->primary();
+			$table->increments('CodDuvidas')->primary();
 			$table->integer('CodUsuario')->index('CodUsuario');
 			$table->string('Descricao', 1000);
 			$table->string('Titulo', 45);

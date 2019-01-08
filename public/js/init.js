@@ -55,5 +55,6 @@ $(document).scroll(function(){
     suavizarScroll();
     animateScroll();
     $('.collapsible').collapsible();
+    $('select').formSelect();
   }); // end of document ready
 })(jQuery); // end of jQuery name space

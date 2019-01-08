@@ -14,8 +14,8 @@ class CreateCursoTable extends Migration {
 	{
 		Schema::create('curso', function(Blueprint $table)
 		{
-			$table->integer('CodCurso')->primary();
-			$table->string('Titulo', 45);
+			$table->increments('CodCurso')->primary();
+			$table->string('Titulo', 100);
 		});
 	}
 

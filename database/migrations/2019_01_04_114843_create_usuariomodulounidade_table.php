@@ -14,7 +14,7 @@ class CreateUsuariomodulounidadeTable extends Migration {
 	{
 		Schema::create('usuariomodulounidade', function(Blueprint $table)
 		{
-			$table->integer('CodUsuarioModuloUnidade')->primary();
+			$table->increments('CodUsuarioModuloUnidade')->primary();
 			$table->integer('CodmoduloUnidade')->index('CodmoduloUnidade');
 			$table->integer('CodUsuario')->index('CodUsuario');
 		});

@@ -14,7 +14,7 @@ class CreateExplicacaoTable extends Migration {
 	{
 		Schema::create('explicacao', function(Blueprint $table)
 		{
-			$table->integer('CodExplicacao')->primary();
+			$table->increments('CodExplicacao')->primary();
 			$table->integer('CodmoduloUnidade')->index('CodmoduloUnidade');
 			$table->string('Titulo', 45);
 			$table->string('Descricao', 1000);

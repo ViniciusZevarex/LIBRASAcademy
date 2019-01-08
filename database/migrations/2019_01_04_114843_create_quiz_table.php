@@ -14,7 +14,7 @@ class CreateQuizTable extends Migration {
 	{
 		Schema::create('quiz', function(Blueprint $table)
 		{
-			$table->integer('CodQuiz')->primary();
+			$table->increments('CodQuiz')->primary();
 			$table->integer('CodmoduloUnidade')->index('CodmoduloUnidade');
 			$table->string('Pergunta', 45);
 			$table->string('video', 45);

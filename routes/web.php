@@ -10,13 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['namespace' => 'Site'], function () {
+Route::group(['namespace' => 'Site'], function () 
+{
     Route::get('/','SiteController@index');
     Route::get('register','SiteController@register');
     Route::get('login','SiteController@fazerLogin');
 });
 
 
-Route::group(['namespace' => 'Curso'],function(){
+Route::group(['namespace' => 'Curso'],function()
+{
     Route::get('course/dashboard','CursoController@index');
+    Route::get('course/register','CursoController@courseRegisterPage');
+    Route::post('course/adicionarCurso', 'CursoController@cadastrarCurso');
+    Route::get('course/units/register','CursoController@unitCourseRegisterPage');
 });

@@ -14,7 +14,7 @@ class CreateVocabularioTable extends Migration {
 	{
 		Schema::create('vocabulario', function(Blueprint $table)
 		{
-			$table->integer('CodVocabulario')->primary();
+			$table->increments('CodVocabulario')->primary();
 			$table->integer('CodModuloUnidade')->index('CodModuloUnidade');
 			$table->string('Significado', 45);
 			$table->string('VideoSinal', 100);

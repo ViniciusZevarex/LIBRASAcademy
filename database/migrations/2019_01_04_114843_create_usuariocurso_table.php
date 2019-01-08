@@ -14,7 +14,7 @@ class CreateUsuariocursoTable extends Migration {
 	{
 		Schema::create('usuariocurso', function(Blueprint $table)
 		{
-			$table->integer('CodUsuarioCurso')->primary();
+			$table->increments('CodUsuarioCurso')->primary();
 			$table->integer('CodUsuario')->index('CodUsuario');
 			$table->integer('CodCurso')->index('CodCurso');
 		});
